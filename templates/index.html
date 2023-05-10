@@ -1,0 +1,417 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbook</title>
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/fontawesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/bootstrap-icons/font/bootstrap-icons.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+  </head>
+
+  <body class="bg-gray position-relative">
+    <!-- messages -->
+
+    {% for message in messages %}
+    <h3 class="text-danger mx-3 p-0 m-0 position-fixed">{{message}}</h3>
+    {% endfor %}
+
+    <!-- Login -->
+    <div
+      class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+    >
+      <!-- heading -->
+      <div class="text-center text-lg-start mt-lg-5 pt-lg-5">
+        <h1 class="text-primary fw-bold fs-0">Flexbook</h1>
+        <p class="w-75 mx-auto mx-lg-0 fs-4">
+          Facebook helps you connect and share with people in your life.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <div id="indexdiv">
+        <div class="bg-white shadow rounded p-3 input-group-lg">
+          <form method="POST" action="login">
+            {% csrf_token %}
+            <input
+              type="text"
+              name="username"
+              class="form-control my-3"
+              placeholder="Email address or phone number"
+              required
+            />
+
+            <input
+              type="password"
+              name="password"
+              class="form-control my-3"
+              placeholder="Password"
+              required
+            />
+            <a href="/">
+              <button type="submit" class="btn btn-primary w-100 my-3">
+                Login
+              </button>
+            </a>
+            <a href="#">
+              <p class="text-decoration-none text-center">Forgot Password?</p>
+            </a>
+          </form>
+          <!-- create form -->
+          <hr />
+          <div class="text-center my-4">
+            <button
+              type="button"
+              class="btn btn-success btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#createModal"
+            >
+              Create New Account
+            </button>
+          </div>
+
+          <!-- Create modal -->
+
+          <!-- Modal -->
+          <!-- form -->
+
+          <div
+            class="modal fade"
+            id="createModal"
+            tabindex="-1"
+            aria-labelledby="createModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- head -->
+                <div class="modal-header">
+                  <div>
+                    <h2 class="modal-title" id="createModalLabel">Sign Up</h2>
+                    <p class="text-muted fs-7">It's quick and easy.</p>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <!-- Form -->
+                  <form action="register" method="POST">
+                    {% csrf_token %}
+                    <!-- name -->
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          name="firstname"
+                          type="text"
+                          class="form-control"
+                          placeholder="First name"
+                        />
+                      </div>
+
+                      <div class="col">
+                        <input
+                          name="surname"
+                          type="text"
+                          class="form-control"
+                          placeholder="Surname"
+                        />
+                      </div>
+                    </div>
+                    <!-- email & pass -->
+                    <input
+                      type="text"
+                      name="username"
+                      class="form-control my-3"
+                      placeholder="Mobile number or email address"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control my-3"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control my-3"
+                      placeholder="Enter Password"
+                    />
+                    <input
+                      type="password"
+                      name="password2"
+                      class="form-control my-3"
+                      placeholder="Confirm Password"
+                    />
+
+                    <!-- DOB -->
+
+                    <div class="row my-3">
+                      <span class="text-muted fs-7"
+                        >Date of Birth
+                        <i
+                          type="button"
+                          class="fas fa-question-circle"
+                          data-bs-container="body"
+                          data-bs-toggle="popover"
+                          data-bs-placement="right"
+                          data-bs-content="Lorem Ipsum dolor sit amet consectetur"
+                        ></i
+                      ></span>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="3">4</option>
+                          <option value="3">5</option>
+                          <option value="3">6</option>
+                          <option value="3">7</option>
+                          <option value="3">8</option>
+                          <option value="3">9</option>
+                          <option value="3">10</option>
+                          <option value="3">11</option>
+                          <option value="3">12</option>
+                          <option value="3">13</option>
+                          <option value="3">14</option>
+                          <option value="3">15</option>
+                          <option value="3">16</option>
+                          <option value="3">17</option>
+                          <option value="3">18</option>
+                          <option value="3">19</option>
+                          <option value="3">20</option>
+                          <option value="3">21</option>
+                          <option value="3">22</option>
+                          <option value="3">23</option>
+                          <option value="3">24</option>
+                          <option value="3">25</option>
+                          <option value="3">26</option>
+                          <option value="3">27</option>
+                          <option value="3">28</option>
+                          <option value="3">29</option>
+                          <option value="3">30</option>
+                          <option value="3">31</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="3">4</option>
+                          <option value="3">5</option>
+                          <option value="3">6</option>
+                          <option value="3">7</option>
+                          <option value="3">8</option>
+                          <option value="3">9</option>
+                          <option value="3">10</option>
+                          <option value="3">11</option>
+                          <option value="3">12</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">1989</option>
+                          <option value="1">1990</option>
+                          <option value="1">1991</option>
+                          <option value="1">1992</option>
+                          <option value="1">1993</option>
+                          <option value="1">1994</option>
+                          <option value="1">1995</option>
+                          <option value="1">1996</option>
+                          <option value="1">1997</option>
+                          <option value="1">1998</option>
+                          <option value="1">1999</option>
+                          <option value="1">2001</option>
+                          <option value="1">2002</option>
+                          <option value="1">2003</option>
+                          <option value="1">2004</option>
+                          <option value="1">2005</option>
+                          <option value="1">2006</option>
+                          <option value="1">2007</option>
+                          <option value="1">2008</option>
+                          <option value="1">2009</option>
+                          <option value="1">2010</option>
+                          <option value="1">2011</option>
+                          <option value="1">2012</option>
+                          <option value="1">2013</option>
+                          <option value="1">2014</option>
+                          <option value="1">2015</option>
+                          <option value="1">2016</option>
+                          <option value="1">2017</option>
+                          <option value="1">2018</option>
+                          <option value="1">2019</option>
+                          <option value="1">2020</option>
+                          <option value="1">2021</option>
+                          <option value="1">2022</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- gender -->
+
+                    <div class="row my-3">
+                      <span class="text-muted fs-7"
+                        >Gender
+                        <i
+                          type="button"
+                          class="fas fa-question-circle"
+                          data-bs-container="body"
+                          data-bs-toggle="popover"
+                          data-bs-placement="right"
+                          data-bs-content="Lorem Ipsum dolor sit amet consectetur"
+                        ></i
+                      ></span>
+
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            for="flexRadioDefault1"
+                            class="form-check-label"
+                            >Male
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                            checked
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            for="flexRadioDefault2"
+                            class="form-check-label"
+                            >Female
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            for="flexRadioDefault3"
+                            class="form-check-label"
+                            >Custom
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- gender select -->
+
+                    <div class="d-none" id="genderSelect">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="my-3">
+                        <span class="text-muted fs-7"
+                          >Your pronoun is invisible to everyone</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Gender (Optional)"
+                        />
+                      </div>
+                    </div>
+                    <!-- disclaimer -->
+
+                    <div>
+                      <span class="text-muted fs-7">
+                        Lorem ipsum eius impedit veniam. Dolor?
+                      </span>
+                    </div>
+                    <!-- btn -->
+                    <div class="text-center mt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-success btn-lg"
+                        data-bs-dismiss="modal"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- end -->
+        </div>
+        <!-- tag -->
+        <div class="my-5 pb-5 text-center">
+          <p class="fw-bold">
+            <a href="#" class="text-decoration-none text-dark">Create a page</a>
+            <span class="fw-normal">for a celebrity, band or business.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-white p-4 text-muted">
+      <div class="container">
+        <!-- Language  -->
+        <div class="d-flex flex-wrap">
+          <p class="mx-2 fs-7 mb-0">English</p>
+          <p class="mx-2 fs-7 mb-0">Francaise</p>
+          <p class="mx-2 fs-7 mb-0">Portuguese</p>
+          <p class="mx-2 fs-7 mb-0">Spanish</p>
+        </div>
+        <hr />
+        <!-- actions -->
+
+        <div class="d-flex flex-wrap">
+          <p class="mx-2 fs-7 mb-0">Sign Up</p>
+          <p class="mx-2 fs-7 mb-0">Login</p>
+          <p class="mx-2 fs-7 mb-0">Messenger</p>
+          <p class="mx-2 fs-7 mb-0">Facebook Lite</p>
+          <p class="mx-2 fs-7 mb-0">Watch</p>
+        </div>
+        <!-- copy -->
+
+        <div class="mt-4 mx-2">
+          <p class="fs-7">Flexbook &copy; 2022</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- main.js -->
+    <script src="{% static 'assets/js/main.js'%}"></script>
+  </body>
+</html>

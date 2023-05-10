@@ -1,0 +1,2919 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+
+    
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" />
+    <link rel="stylesheet"
+      href="{% static 'assets/css/fontawesome.min.css' %}" />
+    <link rel="stylesheet"
+      href="{% static 'assets/bootstrap-icons/font/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+  </head>
+
+  <body id="body" class="bg-gray  position-relative"
+    style="font-family: Arial, Helvetica, sans-serif; ">
+    <!-- ====================== Appbar ======================== -->
+
+    <div id="feeddiv"
+      class="bg-white d-flex align-items-center fixed-top shadow">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- search -->
+          <div class="col d-flex align-items-center">
+            <!-- logo -->
+            <i class="fab fa-facebook text-primary"></i>
+
+            <!-- search bar -->
+            <div class="input-group ms-2">
+              <!-- mobile -->
+              <span type="button" class="input-group-prepend d-lg-none"
+                id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                data-bs-auto-close="outside">
+                <div style="min-height: 40px"
+                  class="input-group-text bg-gray border-0 rounded-circle">
+                  <i class="fas fa-search text-muted"></i>
+                </div>
+              </span>
+              <!-- desktop -->
+              <span type="button" class="input-group-prepend d-none d-lg-block"
+                id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                data-bs-auto-close="outside">
+                <div id="desktopdiv"
+                  class="input-group-text bg-gray border-0 rounded-pill">
+                  <i class="fas fa-search me-2 text-muted"></i>
+                  <p class="m-0 fs-7 text-muted">Search Facebook</p>
+                </div>
+              </span>
+
+              <!-- search dropdown -->
+
+              <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+                aria-labelledby="searchMenu"
+                style="width: 20em; max-height: 600px">
+                <!-- search input -->
+                <input type="text"
+                  class="rounded-pill border-0 bg-gray dropdown-item"
+                  placeholder="Search on Facebook.... " autofocus />
+
+                <!-- search result  -->
+                <!-- result1 -->
+                <li class="my-4">
+                  <div
+                    class="alert alert fade show p-1 m-0 d-flex align-items-center justify-content-between"
+                    rule="alert">
+                    <div class="d-flex align-items-center">
+                      <img src="{% static 'assets/img/img_5terre.jpg' %}"
+                        alt="avatar" class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover" />
+                      <p class="m-0">Highland</p>
+                    </div>
+                    <button type="button" class="btn-close"
+                      data-bs-dismiss="alert" arialabel="Close"></button>
+                  </div>
+                </li>
+                <!-- result2 -->
+                <li class="my-4">
+                  <div
+                    class="alert alert fade show p-1 m-0 d-flex align-items-center justify-content-between"
+                    rule="alert">
+                    <div class="d-flex align-items-center">
+                      <img src="{% static 'assets/img/landscape4.jpeg' %}"
+                        alt="avatar" class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover" />
+                      <p class="m-0">Landscape</p>
+                    </div>
+                    <button type="button" class="btn-close"
+                      data-bs-dismiss="alert" arialabel="Close"></button>
+                  </div>
+                </li>
+                <!-- result3 -->
+                <li class="my-4">
+                  <div
+                    class="alert alert fade show p-1 m-0 d-flex align-items-center justify-content-between"
+                    rule="alert">
+                    <div class="d-flex align-items-center">
+                      <img src="{% static 'assets/img/landscape4.jpeg' %}"
+                        alt="avatar" class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover" />
+                      <p class="m-0">Mountains</p>
+                    </div>
+                    <button type="button" class="btn-close"
+                      data-bs-dismiss="alert" arialabel="Close"></button>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- end -->
+            </div>
+          </div>
+
+          <!-- nav -->
+          <div  class="col">
+            <div class="d-none d-lg-flex justify-content-center">
+              <!-- home -->
+              <div class="mx-4 nav__btn nav__btn-active">
+                <button type="button" class="btn px-4">
+                  <i class="fas fa-home text-muted fs-4"></i>
+                </button>
+              </div>
+              <!-- market -->
+              <div class="mx-4 nav__btn nav__btn">
+                <button type="button" class="btn px-4">
+                  <i class="fas fa-store text-muted fs-4"></i>
+                </button>
+              </div>
+              <!-- group -->
+              <div class="mx-4 nav__btn nav__btn">
+                <button type="button" class="btn px-4">
+                  <i class="fas fa-users position-relative text-muted fs-4"
+                    style="font-size: 0.5rem">
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1
+                      <span class="visually-hidden"></span>
+                    </span>
+                  </i>
+                </button>
+              </div>
+
+              <!-- gaming -->
+
+              <div class="mx-4 nav__btn nav__btn">
+                <button type="button" class="btn px-4">
+                  <i class="fas fa-gamepad text-muted fs-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <div id="navicon" class="col d-flex align-items-center justify-content-end">
+            <!-- avatar -->
+            <div
+              class="d-none d-xl-flex align-items-center justify-content-center">
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 38px; height: 38px; object-fit: cover" />
+              <p class="m-0">John</p>
+            </div>
+
+            <!-- ==main menu== -->
+            <div
+              class="d-flex align-items-center rounded-circle justify-content-center p-1 mx-2 bg-gray"
+              style="width: 38px; height: 38px; object-fit: cover" id="mainMenu"
+              data-bs-toggle="dropdown" aria-expanded="false" type="button">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <!-- main menu dd -->
+            <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+              aria-labelledby="mainMenu" style="width: 23em; max-height: 600px">
+              <!-- menu  -->
+              <div>
+                <!-- header -->
+                <li class="p-1 mx-2">
+                  <h2>Menu</h2>
+                </li>
+                <!-- search -->
+                <li class="p-1">
+                  <div class="input-group-text bg-gray border-0 rounded-pill"
+                    style="min-height: 40px; min-width: 230px">
+                    <i class="fas fa-search me-2 text-muted"></i>
+                    <input type="text" placeholder="Search Menu"
+                      class="form-control rounded-pill border-0 bg-gray" />
+                  </div>
+                </li>
+                <!-- social items -->
+
+                <h4 class="m-2">Social</h4>
+                <!-- s 1 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/map.jpg' %}"
+                        alt="icon from fb" class="rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover" />
+                    </div>
+                    <div>
+                      <p class="m-0">Campus</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- s 2 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/bitcoin.jpg' %}"
+                        alt="icon from fb" class="rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover" />
+                    </div>
+                    <div>
+                      <p class="m-0">Events</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- s 3 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <i class="fas fa-user-group text-primary fa-2x rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Friends</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- s 4 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <i class="fas fa-users fa-2x text-success rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Groups</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- s 5 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <i class="fas fa-id-card r fa-2x text-warning ounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">News Feed</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- s 6 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <i class="fas fa-book-open text-danger fa-2x rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Pages</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- ent item -->
+                <hr />
+
+                <h4 class="m-2">Entertainment</h4>
+                <!-- e 1 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/map.jpg' %}"
+                        alt="icon from fb" class="rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover" />
+                    </div>
+                    <div>
+                      <p class="m-0">Action</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- e 2 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/map.jpg' %}"
+                        alt="icon from fb" class="rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover" />
+                    </div>
+                    <div>
+                      <p class="m-0">Sports</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- e 3 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/map.jpg' %}"
+                        alt="icon from fb" class="rounded-circle"
+                        style="width: 48px; height: 48px; object-fit: cover" />
+                    </div>
+                    <div>
+                      <p class="m-0">Music</p>
+                      <span class="fs-7 text-muted">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Ipsa, expedita.</span>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <hr />
+              <!-- create -->
+              <div>
+                <!-- header -->
+                <li class="p-1 mx-2">
+                  <h2>Create</h2>
+                </li>
+                <!-- c 1 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-edit"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Post</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 2 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-book-open"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Story</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 3 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Video</p>
+                    </div>
+                  </a>
+                </li>
+
+                <hr />
+                <!-- c 4 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-flag"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Page</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 5 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-plus-square"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Add</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 6 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Groups</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 7 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-book"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Events</p>
+                    </div>
+                  </a>
+                </li>
+                <!-- c 8 -->
+                <li class="my-2 p-1">
+                  <a href="#"
+                    class="text-decoration-none text-dark d-flex align-items-center">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 me-3"
+                      style="width: 38px; height: 38px">
+                      <i class="fas fa-store"></i>
+                    </div>
+                    <div>
+                      <p class="m-0">Market</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+            </ul>
+
+            <!-- ==chat=== -->
+            <div
+              class="d-flex align-items-center rounded-circle justify-content-center p-1 mx-2 bg-gray"
+              style="width: 38px; height: 38px; object-fit: cover" id="chatMenu"
+              data-bs-toggle="dropdown" aria-expanded="false" type="button"
+              data-bs-auto-close="outside">
+              <i class="fas fa-comment"></i>
+            </div>
+            <!-- chat dd -->
+            <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+              aria-labelledby="chatMenu" style="width: 23em; max-height: 600px">
+              <!-- header  -->
+              <li class="p-1">
+                <div class="d-flex justify-content-between">
+                  <h2>Message</h2>
+                  <!-- icons -->
+                  <div>
+                    <!-- settings -->
+                    <i class="fas fa-ellipsis-h text-muted mx-2" type="button"
+                      data-bs-toggle="dropdown"></i>
+                    <!-- setting dd -->
+                    <ul class="dropdown-menu shadow" style="width: 18em">
+                      <!-- title -->
+                      <div class="p-2">
+                        <h5>Chat Setings</h5>
+                        <span class="text-muted fs-7">
+                          Lorem ipsum dolor sit amet.
+                        </span>
+                      </div>
+                      <!-- Item 1 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-dark"></i>
+                            <p class="m-0">Incoming Call sounds</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Item 2 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i
+                              class="bi bi-megaphone-fill me-3 text-warning"></i>
+                            <p class="m-0">Message sounds</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Item 3 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-message text-success me-3"></i>
+                            <p class="m-0">Pop-up new messages</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+
+                        <span class="ms-5 text-muted fs-7">
+                          Lorem ipsum dolor sit.
+                        </span>
+                      </li>
+                      <hr class="m-0" />
+                      <!-- Item 4 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="bi bi-music-note me-3 text-danger"></i>
+                            <p class="m-0">Turn off Notifications</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Item 5 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-dark"></i>
+                            <p class="m-0">Incoming Call sounds</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Item 6 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-dark"></i>
+                            <p class="m-0">Incoming Call sounds</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Item 7 -->
+                      <li>
+                        <div
+                          class="dropdown-item d-flex align-items-center justify-content-between">
+                          <!-- icon -->
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-phone-alt me-3 text-dark"></i>
+                            <p class="m-0">Incoming Call sounds</p>
+                          </div>
+                          <!-- toggle -->
+                          <div class="form-check form-switch m-0">
+                            <input type="checkbox" id="flexSwitchCheckChecked"
+                              class="form-check-input" checked />
+                            <label for="flexSwitchCheckChecked"
+                              class="form-check-label">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <!-- expand -->
+                    <i type="button"
+                      class="fas fa-expand-arrows-alt text-muted mx-2"></i>
+                    <!-- new message -->
+                    <i type="button" class="fas fa-edit text-muted mx-2"
+                      data-bs-toggle="modal" data-bs-target="#newChat"></i>
+                  </div>
+                </div>
+              </li>
+
+              <!-- search -->
+              <li class="p-1">
+                <div class="input-group-text bg-gray border-0 rounded-pill"
+                  style="min-height: 40px; min-width: 230px">
+                  <i class="fas fa-search me-2 text-muted"></i>
+                  <input type="text" placeholder="Search Messenger"
+                    class="form-control rounded-pill border-0 bg-gray" />
+                </div>
+              </li>
+
+              <!-- message 1 -->
+              <li class="my-2 p-1" type="button" data-bs-toggle="modal"
+                data-bs-target="#singleChat1">
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- big avatar -->
+                  <div class="d-flex align-items-center justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/pic1.jpg' %}"
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover"
+                        alt="avatar" />
+                    </div>
+                    <!-- message   -->
+                    <div>
+                      <p class="fs-7 m-0">Mike</p>
+                      <span class="fs-7 fw-bolder text-black text-muted">Hey!
+                        wassup &#8226; 7d
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- small avatar -->
+                  <div class="p-2">
+                    <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                      class="rounded-circle"
+                      style="width: 15px; height: 15px; object-fit: cover" />
+                  </div>
+                </div>
+              </li>
+              <!-- message 2 -->
+              <li class="my-2 p-1" type="button" data-bs-toggle="modal"
+                data-bs-target="#singleChat2">
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- big avatar -->
+                  <div class="d-flex align-items-center justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/pic2.jpg' %}"
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover"
+                        alt="avatar" />
+                    </div>
+                    <!-- message   -->
+                    <div>
+                      <p class="fs-7 m-0">Frank</p>
+                      <span class="fs-7 fw-bolder text-black text-muted">Hi
+                        &#8226; 7d
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- small avatar -->
+                  <div class="p-2">
+                    <img src="{% static 'assets/img/pic2.jpg' %}" alt="avatar"
+                      class="rounded-circle"
+                      style="width: 15px; height: 15px; object-fit: cover" />
+                  </div>
+                </div>
+              </li>
+              <!-- message 3 -->
+              <li class="my-2 p-1" type="button" data-bs-toggle="modal"
+                data-bs-target="#singleChat3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- big avatar -->
+                  <div class="d-flex align-items-center justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/pic3.jpg' %}"
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover"
+                        alt="avatar" />
+                    </div>
+                    <!-- message   -->
+                    <div>
+                      <p class="fs-7 m-0">Peter</p>
+                      <span class="fs-7 fw-bolder text-black text-muted">Thanks
+                        😀 &#8226; 7d
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- small avatar -->
+                  <div class="p-2">
+                    <img src="{% static 'assets/img/images.jpeg' %}"
+                      alt="avatar" class="rounded-circle"
+                      style="width: 15px; height: 15px; object-fit: cover" />
+                  </div>
+                </div>
+              </li>
+              <!-- message 4 -->
+              <li class="my-2 p-1" type="button" data-bs-toggle="modal"
+                data-bs-target="#singleChat4">
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- big avatar -->
+                  <div class="d-flex align-items-center justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/pix1.jpg' %}"
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover"
+                        alt="avatar" />
+                    </div>
+                    <!-- message   -->
+                    <div>
+                      <p class="fs-7 m-0">Andrew</p>
+                      <span class="fs-7 text-black text-muted">You don't mean
+                        it. &#8226; <strong>just now</strong>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- small avatar -->
+                  <div class="p-2">
+                    <img src="{% static 'assets/img/images.jpeg' %}"
+                      alt="avatar" class="rounded-circle"
+                      style="width: 15px; height: 15px; object-fit: cover" />
+                  </div>
+                </div>
+              </li>
+              <!-- message 5 -->
+              <li class="my-2 p-1" type="button" data-bs-toggle="modal"
+                data-bs-target="#singleChat5">
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- big avatar -->
+                  <div class="d-flex align-items-center justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/angry.png' %}"
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover"
+                        alt="avatar" />
+                    </div>
+                    <!-- message   -->
+                    <div>
+                      <p class="fs-7 m-0">Jane</p>
+                      <span class="fs-7 fw-bolder text-black text-muted">I miss
+                        you! 😔 &#8226; 7d
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- small avatar -->
+                  <div class="p-2">
+                    <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                      class="rounded-circle"
+                      style="width: 15px; height: 15px; object-fit: cover" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- ==notification== -->
+            <div
+              class="d-flex align-items-center rounded-circle justify-content-center p-1 mx-2 bg-gray"
+              style="width: 38px; height: 38px; object-fit: cover"
+              id="notificationMenu" data-bs-toggle="dropdown"
+              aria-expanded="false" type="button" data-bs-auto-close="outside">
+              <i class="fas fa-bell"></i>
+            </div>
+            <!-- notification dd -->
+            <ul class="dropdown-menu border-0 shadow p-3 overflow-y: auto"
+              aria-labelledby="notificationMenu"
+              style="width: 23em; max-height: 600px">
+              <!-- header -->
+              <li class="p-1">
+                <div class="d-flex justify-content-between">
+                  <h2>Notifications</h2>
+                  <!-- icon -->
+                  <i class="fas fa-ellipsis-h rounded-circle m-2 p-2 bg-gray"
+                    type="button" data-bs-toggle="dropdown"></i>
+                  <!-- icon dd -->
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item d-flex align-items-center"
+                      type="button">
+                      <i class="fas fa-check me-3 text-muted"></i>
+                      <p class="m-0">Mark all as read</p>
+                    </li>
+
+                    <li class="dropdown-item d-flex align-items-center"
+                      type="button">
+                      <i class="fas fa-check me-3 text-muted"></i>
+                      <p class="m-0">Mark all as read</p>
+                    </li>
+                    <li class="dropdown-item d-flex align-items-center"
+                      type="button">
+                      <i class="fas fa-check me-3 text-muted"></i>
+                      <p class="m-0">Mark all as read</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="d-flex" type="button">
+                  <p class="rounded-pill bg-gray p-2">All</p>
+                  <p class="ms-3 rounded-pill bg-primary text-white p-2">
+                    Unread
+                  </p>
+                </div>
+              </li>
+
+              <!-- News -->
+              <div class="d-flex justify-content-between mx-2">
+                <h5>News</h5>
+                <a href="#" class="text-decoration-none">See All</a>
+              </div>
+
+              <!-- news 1 -->
+              <li class="my-2 p-1">
+                <a href="#"
+                  class="d-flex align-items-center justify-content-evenly text-dark text-decoration-none">
+                  <div class="d-flex align-items-cener justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/mountain_bg.jpg' %}"
+                        alt="avatar " class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover" />
+                    </div>
+                    <!-- msg -->
+                    <div>
+                      <p class="fs-7 m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, harum.
+                      </p>
+                      <span class="fs-7 text-primary">about an hour ago</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-circle fs-7 text-primary"></i>
+                </a>
+              </li>
+              <!-- news 2 -->
+              <li class="my-2 p-1">
+                <a href="#"
+                  class="d-flex align-items-center justify-content-evenly text-dark text-decoration-none">
+                  <div class="d-flex align-items-cener justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/map.jpg' %}" alt="avatar "
+                        class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover" />
+                    </div>
+                    <!-- msg -->
+                    <div>
+                      <p class="fs-7 m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, harum.
+                      </p>
+                      <span class="fs-7 text-primary">about an hour ago</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-circle fs-7 text-primary"></i>
+                </a>
+              </li>
+              <!-- news 3 -->
+              <li class="my-2 p-1">
+                <a href="#"
+                  class="d-flex align-items-center justify-content-evenly text-dark text-decoration-none">
+                  <div class="d-flex align-items-cener justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/landscape4.jpeg' %}"
+                        alt="avatar " class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover" />
+                    </div>
+                    <!-- msg -->
+                    <div>
+                      <p class="fs-7 m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, harum.
+                      </p>
+                      <span class="fs-7 text-primary">about an hour ago</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-circle fs-7 text-primary"></i>
+                </a>
+              </li>
+              <!-- news 4 -->
+              <li class="my-2 p-1">
+                <a href="#"
+                  class="d-flex align-items-center justify-content-evenly text-dark text-decoration-none">
+                  <div class="d-flex align-items-cener justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/bitcoin.jpg' %}"
+                        alt="avatar " class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover" />
+                    </div>
+                    <!-- msg -->
+                    <div>
+                      <p class="fs-7 m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, harum.
+                      </p>
+                      <span class="fs-7 text-primary">about an hour ago</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-circle fs-7 text-primary"></i>
+                </a>
+              </li>
+              <!-- news 5 -->
+              <li class="my-2 p-1">
+                <a href="#"
+                  class="d-flex align-items-center justify-content-evenly text-dark text-decoration-none">
+                  <div class="d-flex align-items-cener justify-content-evenly">
+                    <!-- avatar -->
+                    <div class="p-2">
+                      <img src="{% static 'assets/img/img_5terre.jpg' %}"
+                        alt="avatar " class="rounded-circle"
+                        style="width: 58px; height: 58px; object-fit: cover" />
+                    </div>
+                    <!-- msg -->
+                    <div>
+                      <p class="fs-7 m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, harum.
+                      </p>
+                      <span class="fs-7 text-primary">about an hour ago</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-circle fs-7 text-primary"></i>
+                </a>
+              </li>
+            </ul>
+
+            <!-- secondary menu -->
+            <div
+              class="d-flex align-items-center rounded-circle justify-content-center p-1 mx-2 bg-gray"
+              style="width: 38px; height: 38px; object-fit: cover" id="secMenu"
+              data-bs-toggle="dropdown" aria-expanded="false" type="button"
+              data-bs-auto-close="outside">
+              <i class="fas fa-caret-down"></i>
+            </div>
+
+            <!-- secondary menu dd -->
+            <ul class="dropdown-menu border-0 shadow p-3 overflow-y: auto"
+              aria-labelledby="secMenu " style="width: 23em; max-height: 600px">
+              <!-- avatar -->
+              <li class="dropdown-item p-1 rounded d-flex" type="button">
+                <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 45px; height: 45px; object-fit: cover" />
+                <div>
+                  <p class="m-0">John</p>
+                  <p class="m-0 text-muted">See your profile</p>
+                </div>
+              </li>
+              <!-- feedback -->
+
+              <hr />
+              <!-- options -->
+              <!-- o 1 -->
+
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <div class="d-flex" data-bs-toggle="dropdown">
+                      <!-- icon -->
+                      <i class="fas fa-cog bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100 ms-3">
+                        <p class="m-0">Settings & Privacy</p>
+                        <i class="fas fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <!-- nested menu -->
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-cog"></i>
+                          </div>
+                          <p class="m-0">Settings</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-lock-open"></i>
+                          </div>
+                          <p class="m-0">Privacy Checkup</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-lock"></i>
+                          </div>
+                          <p class="m-0">Privacy center</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-list"></i>
+                          </div>
+                          <p class="m-0">Activity Log</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-newspaper"></i>
+                          </div>
+                          <p class="m-0">News Feed</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="bi bi-globe fw-bold"></i>
+                          </div>
+                          <p class="m-0">Languages</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- o 2 -->
+
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <div class="d-flex" data-bs-toggle="dropdown">
+                      <!-- icon -->
+                      <i
+                        class="bi bi-question-circle-fill bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100 ms-3">
+                        <p class="m-0">Help & Support</p>
+                        <i class="fas fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <!-- nested menu -->
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-question-circle"></i>
+                          </div>
+                          <p class="m-0">Help Center</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-message"></i>
+                          </div>
+                          <p class="m-0">Support inbox</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#"
+                          class="dropdown-item d-flex align-items-center">
+                          <div
+                            class="d-flex align-contents-center justify-content-center rounded-circle p-1 bg-gray me-2">
+                            <i class="fas fa-exclamation-triangle"></i>
+                          </div>
+                          <p class="m-0">Report a problem</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- o 3 -->
+
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <div class="d-flex" data-bs-toggle="dropdown">
+                      <!-- icon -->
+                      <i class="bi bi-moon-fill bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100 ms-3">
+                        <p class="m-0">Display & accessibility</p>
+                        <i class="fas fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <!-- nested menu -->
+                    <ul class="dropdown-menu">
+                      <!-- heading  -->
+                      <div class="d-flex m-2 p-3 flex-column">
+                        <div class="row " style="margin:0 -40px ;">
+                          <div class="col-3">
+                            <div
+                              class="d-flex rounded-circle justify-content-between align-items-center">
+                              <i class="bi bi-moon-fill ms-3"></i>
+                              <h5 class="mx-4 text-black fw-bold">Dark Mode</h5>
+                            </div>
+                          </div>
+                          <div class="col-9 mx-1">
+                            <div class="d-flex flex-column">
+                              <p class="fs-7 text-wrap text-muted end-0 "
+                                style='margin-left:40px;'>Adjust facebook
+                                appearance to reduce glare and give your eyes a
+                                break</p>
+                            </div>
+                          </div>
+                        </div>
+                        <li>
+                          <div
+                            class="form-check d-flex align-items-end dropdown-item justify-content-between">
+                            <label class="form-check-label" for="radio__off">
+                              Off
+                            </label>
+
+                            <input onclick="darkModeOff()"  class="form-check-input" type="radio"
+                              name="flexRadioDefault" id="radio__off" checked />
+
+                          </div>
+                        </li>
+
+                        <li>
+                          <div
+                            class="form-check d-flex dropdown-item align-items-end justify-content-between">
+                            <label class="form-check-label" for="radio__on">
+                              On
+                            </label>
+
+                            <input onclick="darkMode()" class="form-check-input" type="radio"
+                              name="flexRadioDefault" id="radio__on" />
+
+                          </div>
+                        </li>
+
+
+                      </div>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!--  o-4    -->
+              <li class="dropdown-item p-1 d-flex align-items-center">
+                <i class="fas fa-exclamation-circle bg-gray"></i>
+                <div class="ms-3">
+                  <p class="m-0">Give feedback</p>
+                  <p class="m-0 text-muted fs-7">Help us improve Facebook</p>
+                </div>
+              </li>
+
+              <!-- o 5 -->
+
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="/" class="d-flex text-decoration-none text-dark">
+                      <!-- icon -->
+                      <i class="me-1 fa-solid fa-arrow-right-from-bracket"></i>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100 ms-3">
+                        <p class="ms-0 m-0">Log Out</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <div class="row">
+                <ul class="list-unstyled d-inline-flex">
+                  <li class="fs-7 me-1 text-muted">Privacy.</li>
+                  <li class="fs-7 me-1 text-muted">Terms.</li>
+                  <li class="fs-7 me-1 text-muted">Advertising.</li>
+                  <li class="fs-7 me-1 text-muted">Ads Choices.</li>
+                  <li class="fs-7 me-1 text-muted">Cookies.</li>
+                </ul>
+                <div class="row">
+                  <ul class="list-unstyled d-inline-flex">
+                    <li class="fs-7 me-2 text-muted">More</li>
+                    <li class="fs-7 text-muted">&copy; meta 2022.</li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--==========================   New Chat ========================================== -->
+    <div class="modal fade" id="newChat" tabindex="-1"
+      aria-labelledby="newChatLabel" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div
+        class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75 shadow"
+        style="transform: translateX(-80px)">
+        <div class="modal-content border-0">
+          <!-- head -->
+          <div class="modal-header align-items-start">
+            <div>
+              <h6 class="modal-title text-dark mb-2" id="newChatLabel">
+                New Message
+              </h6>
+              <label class="text-dark">To:</label>
+              <input type="text" class="border-0" />
+            </div>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body shadow m-0">
+            <p class="m-0 text-primary ms-4">Suggested</p>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer bordre-0" style="min-height: 300px"></div>
+        </div>
+      </div>
+    </div>
+    <!--==========================   Single Chat ========================================== -->
+    <!-- Chat 1 -->
+    <div class="modal fade" id="singleChat1" tabindex="-1"
+      aria-labelledby="singleChat1Label" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75"
+        style="transform: translateX(-80px)">
+        <div class="modal-content m-0 border-0 shadow">
+          <!-- head -->
+          <div class="modal-header">
+            <div class="dropdown-item d-flex rounded" data-bs-container="body"
+              data-bs-toggle="popover" data-bs-placement="left" data-bs-content='
+              <div>
+
+                <!-- item 1 -->
+                <div class="popover-body d-flex flex-column p-0">
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-messenger text-primary  me-3 fs-4"></i>
+                     <p class="m-0">Open Messenger</p>
+                  </div>
+
+                  <!-- item 2 -->
+                    <div class="d-flex align-items-center  dropdown-item p-2 rounded">
+                      <i class="bi bi-tv  text-dark me-3 fs-4"></i>
+                       <p class="m-0">Get the Messenger app</p>
+
+                    </div>
+
+                  <!-- item 3 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi  bi-person-circle  text-dark  me-3 fs-4"></i>
+                     <p class="m-0"> View Profiles</p>
+
+                  </div>
+
+                  <hr/>
+
+                  <!-- item 4 -->
+                    <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                      <i class="bi bi-stop-circle-fill text-success  me-3 fs-4"></i>
+                       <p class="m-0">Change theme</p>
+
+                    </div>
+
+                  <!-- item 5 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-emoji-smile me-3 fs-4"></i>
+                     <p class="m-0">Emoji</p>
+
+                  </div>
+
+
+                  <!-- item 6 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="fas fa-pencil  me-3 fs-4"></i>
+                     <p class="m-0">Nicknames</p>
+
+                  </div>
+
+                  <hr/>
+
+                  <!-- item 7 -->
+                    <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                      <i class="bi bi-bell-fill text-warning  me-3 fs-4"></i>
+                       <p class="m-0">Change theme</p>
+
+                    </div>
+
+                  <!-- item 8 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-bag-x-fill me-3 fs-4"></i>
+                     <p class="m-0">Ignore messages</p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              ' data-bs-html="true">
+              <!-- avatar -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 38px; height: 38px; object-fit: cover" />
+                <span
+                  class="position-absolute bottom-0 translate-middle bg-success border border-light rounded-circle p-1"
+                  style="left: 75%"><span class="visually-hidden"></span></span>
+              </div>
+              <!-- name -->
+              <div>
+                <p class="m-0">
+                  Mike <i type="button" class="fas fa-angle-down"></i>
+                </p>
+                <span class="text-muted fs-7">Active Now</span>
+              </div>
+            </div>
+            <!-- close -->
+            <i class="fas fa-video mx-2 text-muted" type="button"></i>
+            <i class="fas fa-phone-alt mx-2 text-muted" type="button"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <!-- body -->
+          <div class="modal-body overflow-auto" style="max-height: 300px">
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Hey! wassup.</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">How are you .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">How's everyone.</p>
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Fine.</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">That's good</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">yh .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer border-0 p-0 m-0">
+            <div class="d-flex">
+              <!-- icons -->
+              <div class="d-flex align-items-center">
+                <i class="fas fa-plus-circle mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-file-image mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-potrait mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-adjust mx-1 fs-5 text-muted" type="button"></i>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text"
+                  class="form-control rounded-pill border-0 bg-gray"
+                  placeholder="Aa" />
+              </div>
+              <!-- icon -->
+
+              <div class="d-flex align-items-center mx-2">
+                <i class="fas fa-thumbs-up fs-5 text-muted" type="button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat 2 -->
+    <div class="modal fade" id="singleChat2" tabindex="-1"
+      aria-labelledby="singleChat2Label" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75"
+        style="transform: translateX(-80px)">
+        <div class="modal-content m-0 border-0 shadow">
+          <!-- head -->
+          <div class="modal-header">
+            <div class="dropdown-item d-flex rounded" data-bs-container="body"
+              data-bs-toggle="popover" data-bs-placement="left" data-bs-content='
+              <!-- item 1 -->
+              <div class="popover-body d-flex flex-column p-0">
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-messenger text-primary  me-3 fs-4"></i>
+                   <p class="m-0">Open Messenger</p>
+                </div>
+
+                <!-- item 2 -->
+                  <div class="d-flex align-items-center  dropdown-item p-2 rounded">
+                    <i class="bi bi-tv  text-dark me-3 fs-4"></i>
+                     <p class="m-0">Get the Messenger app</p>
+
+                  </div>
+
+                <!-- item 3 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi  bi-person-circle  text-dark  me-3 fs-4"></i>
+                   <p class="m-0"> View Profiles</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 4 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-stop-circle-fill text-success  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 5 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-emoji-smile me-3 fs-4"></i>
+                   <p class="m-0">Emoji</p>
+
+                </div>
+
+
+                <!-- item 6 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="fas fa-pencil  me-3 fs-4"></i>
+                   <p class="m-0">Nicknames</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 7 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-bell-fill text-warning  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 8 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-bag-x-fill me-3 fs-4"></i>
+                   <p class="m-0">Ignore messages</p>
+
+                </div>
+
+              </div>
+
+            </div>
+              ' data-bs-html="true">
+              <!-- avatar -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic2.jpg' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 38px; height: 38px; object-fit: cover" />
+                <span
+                  class="position-absolute bottom-0 translate-middle bg-success border border-light rounded-circle p-1"
+                  style="left: 75%"><span class="visually-hidden"></span></span>
+              </div>
+              <!-- name -->
+              <div>
+                <p class="m-0">
+                  Frank <i type="button" class="fas fa-angle-down"></i>
+                </p>
+                <span class="text-muted fs-7">Active Now</span>
+              </div>
+            </div>
+            <!-- close -->
+            <i class="fas fa-video mx-2 text-muted" type="button"></i>
+            <i class="fas fa-phone-alt mx-2 text-muted" type="button"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <!-- body -->
+          <div class="modal-body overflow-auto" style="max-height: 300px">
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic2.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Hi.</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Hello .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic2.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Where do you live?.</p>
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">I reside in Lagos.</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic2.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Okay</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">yh .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer border-0 p-0 m-0">
+            <div class="d-flex">
+              <!-- icons -->
+              <div class="d-flex align-items-center">
+                <i class="fas fa-plus-circle mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-file-image mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-potrait mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-adjust mx-1 fs-5 text-muted" type="button"></i>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text"
+                  class="form-control rounded-pill border-0 bg-gray"
+                  placeholder="Aa" />
+              </div>
+              <!-- icon -->
+
+              <div class="d-flex align-items-center mx-2">
+                <i class="fas fa-thumbs-up fs-5 text-muted" type="button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat 3 -->
+    <div class="modal fade" id="singleChat3" tabindex="-1"
+      aria-labelledby="singleChat3Label" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75"
+        style="transform: translateX(-80px)">
+        <div class="modal-content m-0 border-0 shadow">
+          <!-- head -->
+          <div class="modal-header">
+            <div class="dropdown-item d-flex rounded" data-bs-container="body"
+              data-bs-toggle="popover" data-bs-placement="left" data-bs-content='
+              <!-- item 1 -->
+              <div class="popover-body d-flex flex-column p-0">
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-messenger text-primary  me-3 fs-4"></i>
+                   <p class="m-0">Open Messenger</p>
+                </div>
+
+                <!-- item 2 -->
+                  <div class="d-flex align-items-center  dropdown-item p-2 rounded">
+                    <i class="bi bi-tv  text-dark me-3 fs-4"></i>
+                     <p class="m-0">Get the Messenger app</p>
+
+                  </div>
+
+                <!-- item 3 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi  bi-person-circle  text-dark  me-3 fs-4"></i>
+                   <p class="m-0"> View Profiles</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 4 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-stop-circle-fill text-success  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 5 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-emoji-smile me-3 fs-4"></i>
+                   <p class="m-0">Emoji</p>
+
+                </div>
+
+
+                <!-- item 6 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="fas fa-pencil  me-3 fs-4"></i>
+                   <p class="m-0">Nicknames</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 7 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-bell-fill text-warning  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 8 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-bag-x-fill me-3 fs-4"></i>
+                   <p class="m-0">Ignore messages</p>
+
+                </div>
+
+              </div>
+
+            </div>
+            ' data-bs-html="true">
+              <!-- avatar -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic3.jpg' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 38px; height: 38px; object-fit: cover" />
+                <span
+                  class="position-absolute bottom-0 translate-middle bg-success border border-light rounded-circle p-1"
+                  style="left: 75%"><span class="visually-hidden"></span></span>
+              </div>
+              <!-- name -->
+              <div>
+                <p class="m-0">
+                  Peter <i type="button" class="fas fa-angle-down"></i>
+                </p>
+                <span class="text-muted fs-7">Active Now</span>
+              </div>
+            </div>
+            <!-- close -->
+            <i class="fas fa-video mx-2 text-muted" type="button"></i>
+            <i class="fas fa-phone-alt mx-2 text-muted" type="button"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <!-- body -->
+          <div class="modal-body overflow-auto" style="max-height: 300px">
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic3.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Have you done it .</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">yes i have .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic3.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">I really appreciate</p>
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Ywlc</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">yh .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic3.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Thanks 😀</p>
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer border-0 p-0 m-0">
+            <div class="d-flex">
+              <!-- icons -->
+              <div class="d-flex align-items-center">
+                <i class="fas fa-plus-circle mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-file-image mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-potrait mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-adjust mx-1 fs-5 text-muted" type="button"></i>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text"
+                  class="form-control rounded-pill border-0 bg-gray"
+                  placeholder="Aa" />
+              </div>
+              <!-- icon -->
+
+              <div class="d-flex align-items-center mx-2">
+                <i class="fas fa-thumbs-up fs-5 text-muted" type="button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat 4 -->
+    <div class="modal fade" id="singleChat4" tabindex="-1"
+      aria-labelledby="singleChat4Label" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75"
+        style="transform: translateX(-80px)">
+        <div class="modal-content m-0 border-0 shadow">
+          <!-- head -->
+          <div class="modal-header">
+            <div class="dropdown-item d-flex rounded" data-bs-container="body"
+              data-bs-toggle="popover" data-bs-placement="left" data-bs-content='
+              <!-- item 1 -->
+              <div class="popover-body d-flex flex-column p-0">
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-messenger text-primary  me-3 fs-4"></i>
+                   <p class="m-0">Open Messenger</p>
+                </div>
+
+                <!-- item 2 -->
+                  <div class="d-flex align-items-center  dropdown-item p-2 rounded">
+                    <i class="bi bi-tv  text-dark me-3 fs-4"></i>
+                     <p class="m-0">Get the Messenger app</p>
+
+                  </div>
+
+                <!-- item 3 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi  bi-person-circle  text-dark  me-3 fs-4"></i>
+                   <p class="m-0"> View Profiles</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 4 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-stop-circle-fill text-success  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 5 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-emoji-smile me-3 fs-4"></i>
+                   <p class="m-0">Emoji</p>
+
+                </div>
+
+
+                <!-- item 6 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="fas fa-pencil  me-3 fs-4"></i>
+                   <p class="m-0">Nicknames</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 7 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-bell-fill text-warning  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 8 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-bag-x-fill me-3 fs-4"></i>
+                   <p class="m-0">Ignore messages</p>
+
+                </div>
+
+              </div>
+
+            </div>
+            ' data-bs-html="true">
+              <!-- avatar -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pix1.jpg' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 38px; height: 38px; object-fit: cover" />
+                <span
+                  class="position-absolute bottom-0 translate-middle bg-success border border-light rounded-circle p-1"
+                  style="left: 75%"><span class="visually-hidden"></span></span>
+              </div>
+              <!-- name -->
+              <div>
+                <p class="m-0">
+                  Andrew <i type="button" class="fas fa-angle-down"></i>
+                </p>
+                <span class="text-muted fs-7">Active Now</span>
+              </div>
+            </div>
+            <!-- close -->
+            <i class="fas fa-video mx-2 text-muted" type="button"></i>
+            <i class="fas fa-phone-alt mx-2 text-muted" type="button"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <!-- body -->
+          <div class="modal-body overflow-auto" style="max-height: 300px">
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pix1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">How much?</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">N24,000 .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pix1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Really?</p>
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">yh.</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Dollar has gone up 😂</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pix1.jpg' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">You don't mean it</p>
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer border-0 p-0 m-0">
+            <div class="d-flex">
+              <!-- icons -->
+              <div class="d-flex align-items-center">
+                <i class="fas fa-plus-circle mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-file-image mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-potrait mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-adjust mx-1 fs-5 text-muted" type="button"></i>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text"
+                  class="form-control rounded-pill border-0 bg-gray"
+                  placeholder="Aa" />
+              </div>
+              <!-- icon -->
+
+              <div class="d-flex align-items-center mx-2">
+                <i class="fas fa-thumbs-up fs-5 text-muted" type="button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat 5 -->
+    <div class="modal fade" id="singleChat5" tabindex="-1"
+      aria-labelledby="singleChat5Label" aria-hidden="true"
+      data-bs-backdrop="false">
+      <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75"
+        style="transform: translateX(-80px)">
+        <div class="modal-content m-0 border-0 shadow">
+          <!-- head -->
+          <div class="modal-header">
+            <div class="dropdown-item d-flex rounded" data-bs-container="body"
+              data-bs-toggle="popover" data-bs-placement="left" data-bs-content='
+              <!-- item 1 -->
+              <div class="popover-body d-flex flex-column p-0">
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-messenger text-primary  me-3 fs-4"></i>
+                   <p class="m-0">Open Messenger</p>
+                </div>
+
+                <!-- item 2 -->
+                  <div class="d-flex align-items-center  dropdown-item p-2 rounded">
+                    <i class="bi bi-tv  text-dark me-3 fs-4"></i>
+                     <p class="m-0">Get the Messenger app</p>
+
+                  </div>
+
+                <!-- item 3 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi  bi-person-circle  text-dark  me-3 fs-4"></i>
+                   <p class="m-0"> View Profiles</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 4 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-stop-circle-fill text-success  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 5 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-emoji-smile me-3 fs-4"></i>
+                   <p class="m-0">Emoji</p>
+
+                </div>
+
+
+                <!-- item 6 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="fas fa-pencil  me-3 fs-4"></i>
+                   <p class="m-0">Nicknames</p>
+
+                </div>
+
+                <hr/>
+
+                <!-- item 7 -->
+                  <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                    <i class="bi bi-bell-fill text-warning  me-3 fs-4"></i>
+                     <p class="m-0">Change theme</p>
+
+                  </div>
+
+                <!-- item 8 -->
+                <div class="d-flex align-items-center dropdown-item p-2 rounded">
+                  <i class="bi bi-bag-x-fill me-3 fs-4"></i>
+                   <p class="m-0">Ignore messages</p>
+
+                </div>
+
+              </div>
+
+            </div>
+            ' data-bs-html="true">
+              <!-- avatar -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                  class="rounded-circle me-2"
+                  style="width: 38px; height: 38px; object-fit: cover" />
+                <span
+                  class="position-absolute bottom-0 translate-middle bg-success border border-light rounded-circle p-1"
+                  style="left: 75%"><span class="visually-hidden"></span></span>
+              </div>
+              <!-- name -->
+              <div>
+                <p class="m-0">
+                  Jane <i type="button" class="fas fa-angle-down"></i>
+                </p>
+                <span class="text-muted fs-7">Active Now</span>
+              </div>
+            </div>
+            <!-- close -->
+            <i class="fas fa-video mx-2 text-muted" type="button"></i>
+            <i class="fas fa-phone-alt mx-2 text-muted" type="button"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <!-- body -->
+          <div class="modal-body overflow-auto" style="max-height: 300px">
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">My love how are you.</p>
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Am fine dear .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">Mtcheew 😏</p>
+            </li>
+
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">Hmmmmm</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+            <!-- message r-->
+            <li class="li-group-item border-0 d-flex justify-content-end">
+              <p class="bg-gray p-2 rounded">What's wrong? .</p>
+              <!-- avatar -->
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ms-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+            </li>
+            <!-- message l-->
+            <li class="li-group-item border-0 d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                class="rounded-circle me-2"
+                style="width: 28px; height: 28px; object-fit: cover" />
+              <!-- message -->
+              <p class="bg-gray p-2 rounded">I miss you! 😔</p>
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer border-0 p-0 m-0">
+            <div class="d-flex">
+              <!-- icons -->
+              <div class="d-flex align-items-center">
+                <i class="fas fa-plus-circle mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-file-image mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-potrait mx-1 fs-5 text-muted"
+                  type="button"></i>
+                <i class="fas fa-adjust mx-1 fs-5 text-muted" type="button"></i>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text"
+                  class="form-control rounded-pill border-0 bg-gray"
+                  placeholder="Aa" />
+              </div>
+              <!-- icon -->
+
+              <div class="d-flex align-items-center mx-2">
+                <i class="fas fa-thumbs-up fs-5 text-muted" type="button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== Left SIdebar ======================== -->
+    <div class="darkText" id="leftsidebar">
+      <div
+        class="d-flex flex-column ms-0 align-contents-center justify-content-start position-absolute left-0 pt-5   px-3 w-25 vh-100">
+        <ul class="m-0 position-fixed">
+          <!-- List 1 -->
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-5 align-items-center">
+              <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                class="rounded-circle ;"
+                style="width: 35px; height: 35px; object-fit: cover" />
+              <p class="m-0 ms-3">John</p>
+            </div>
+          </li>
+          <!-- List 2 -->
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-4 align-items-center">
+              <i class="fas fa-user-group text-success"
+                style="font-size: 1.5rem"></i>
+              <p class="m-0 ms-3">Friends</p>
+            </div>
+          </li>
+
+          <!-- List 3 -->
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-4 align-items-center">
+              <i class="fas fa-users text-primary"
+                style="font-size: 1.5rem"></i>
+              <p class="m-0 ms-3">Groups</p>
+              <span
+                class="rounded-circle p-1 mt-5 ms-5 position-absolute bg-primary fs -7 text-muted">
+              </span>
+              <p id="new_1"
+                class="m-0 position-relative mt-5 ms-1 text-primary fs-7">
+                1 new
+              </p>
+            </div>
+          </li>
+          <!-- list 4 -->
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-5 align-items-center">
+              <i class="fas fa-flag text-danger" style="font-size: 1.5rem"></i>
+              <p class="m-0 ms-3">Pages</p>
+            </div>
+          </li>
+
+          <!-- list 5 -->
+
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-4 align-items-center">
+              <i class="fas fa-store text-warning"
+                style="font-size: 1.5rem"></i>
+              <p class="m-0 ms-3">Market Place</p>
+            </div>
+          </li>
+
+          <!-- List 6 -->
+          <li class="m-0 p-0">
+            <!-- avatar -->
+            <div class="d-flex mt-4 align-items-center">
+              <i class="fas fa-video text-dark" style="font-size: 1.5rem"></i>
+              <p class="m-0 ms-3">Watch</p>
+              <span
+                class="rounded-circle p-1 mt-5 ms-5 position-absolute bg-primary fs -7 text-muted">
+              </span>
+              <p id="new_1"
+                class="m-0 position-relative mt-5 ms-1 text-primary fs-7">
+                9+ new videos
+              </p>
+            </div>
+          </li>
+
+          <!-- View more menu -->
+          <!-- avatar -->
+          <div class="d-flex mt-4 align-items-center" id="viewMoreMenu"
+            data-bs-toggle="dropdown" aria-expanded="false" type="button"
+            data-bs-auto-close="outside" style="line-height: 1.2">
+            <i class="fas fa-chevron-down text-dark" style="font-size: 1rem"
+              type="button"></i>
+            <p class="m-0 ms-2">See More</p>
+          </div>
+
+          <!-- viewMore dd -->
+          <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+            aria-labelledby="viewMoreMenu"
+            style="width: 23em; max-height: 600px">
+            <li class="dropdown-item">
+              <div class="d-flex align-items-center">
+                <!-- avatar -->
+                <div class="p-2  d-flex" ">
+                <img
+                  src=" {% static 'assets/img/mountain_bg.jpg' %}"
+                  alt="icon from fb" class="rounded-circle"
+                  style="width: 28px; height: 28px; object-fit: cover" />
+                <!-- text -->
+                <p class="fs-7 text-muted pt-1 ms-1">Lorem, ipsum dolor.</p>
+              </div>
+
+      </div>
+      </li>
+      <li class="dropdown-item">
+        <div class="d-flex align-items-center">
+          <!-- avatar -->
+          <div class="p-2 d-flex">
+            <img src="{% static 'assets/img/img_5terre.jpg' %}"
+              alt="icon from fb" class="rounded-circle"
+              style="width: 28px; height: 28px; object-fit: cover" />
+            <!-- text -->
+            <p class="fs-7 text-muted pt-1 ms-1">Lorem, ipsum dolor.</p>
+          </div>
+
+        </div>
+      </li>
+      </ul>
+
+      <hr class="w-75" />
+      <span class="h5 text-muted fs-bold"> Your Shortcuts </span>
+
+      <!-- List 8 -->
+      <li class="m-0 p-0">
+        <!-- avatar -->
+        <div class="d-flex mt-4 align-items-center">
+          <img src="{% static 'assets/img/map.jpg' %}" alt="avatar"
+            class="rounded-circle ;"
+            style="width: 35px; height: 35px; object-fit: cover" />
+          <p class="m-0 ms-3">Lorem, ipsum.</p>
+        </div>
+      </li>
+      <!-- List 9 -->
+      <li class="m-0 p-0">
+        <!-- avatar -->
+        <div class="d-flex mt-4 align-items-center">
+          <img src="{% static 'assets/img/bitcoin.jpg' %}" alt="avatar"
+            class="rounded-circle ;"
+            style="width: 35px; height: 35px; object-fit: cover" />
+          <p class="m-0 ms-3">Lorem, ipsum.</p>
+        </div>
+      </li>
+
+
+      <!-- see More Menu -->
+      <!-- avatar -->
+      <div class="p-1 m-1 d-flex mt-3 align-items-center ms-4" id="seeMoreMenu"
+        data-bs-toggle="dropdown" aria-expanded="false" type="button"
+        data-bs-auto-close="outside" style="line-height: 1.2">
+        <i class="fas fa-chevron-down text-dark" style="font-size: 1rem"
+          type="button"></i>
+        <p class="m-0 ms-2">See More</p>
+      </div>
+
+      <!-- seeMore dd -->
+      <ul class="dropdown-menu border-0 shadow p-3 overflow-auto"
+        aria-labelledby="seeMoreMenu" style="width: 23em; max-height: 600px">
+        <li class="dropdown-item">
+          <div class="d-flex align-items-center">
+            <!-- avatar -->
+            <div class="p-2  d-flex" ">
+                <img
+                  src=" {% static 'assets/img/mountain_bg.jpg' %}"
+              alt="icon from fb" class="rounded-circle"
+              style="width: 28px; height: 28px; object-fit: cover" />
+            <!-- text -->
+            <p class="fs-7 text-muted pt-1 ms-1">Lorem, ipsum dolor.</p>
+          </div>
+
+    </div>
+    </li>
+    <li class="dropdown-item">
+      <div class="d-flex align-items-center">
+        <!-- avatar -->
+        <div class="p-2 d-flex">
+          <img src="{% static 'assets/img/img_5terre.jpg' %}" alt="icon from fb"
+            class="rounded-circle"
+            style="width: 28px; height: 28px; object-fit: cover" />
+          <!-- text -->
+          <p class="fs-7 text-muted pt-1 ms-1">Lorem, ipsum dolor.</p>
+        </div>
+
+      </div>
+    </li>
+    </ul>
+
+
+    <!-- footer -->
+    <div class="d-flex flex-wrap pt-4">
+      <p class="mx-2 fs-7 mb-0">Privacy</p>
+      <p class="mx-2 fs-7 mb-0">Terms</p>
+      <p class="mx-2 fs-7 mb-0">Advertisement</p>
+      <p class="mx-2 fs-7 mb-0">Cookies</p>
+    </div>
+    <!-- copy -->
+    <div class="mt-2 mx-2">
+      <p class="fs-7">Facebook &copy; 2022</p>
+    </div>
+    </ul>
+
+
+
+
+    </div>
+    </div>
+
+    <!-- ===================rightSidebar ========================== -->
+
+    <div class="row position-relative ">
+      <div
+        class=" d-flex flex-column me-0 align-contents-center justify-content-start position-absolute end-0 px-3 w-25 vh-100">
+        <ul class="p-0 list-unstyled position-fixed  pt-5">
+          <li class="justify-self-end">
+            <!-- item 1-->
+            <h6  class=" text-muted text-start my-3 fw-bold ">Sponsored</h6>
+
+            <div class="d-flex justify-content-between">
+              <img class="d-flex" src="{% static 'assets/img/map.jpg' %}"
+                alt="avatar" style="
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                  " />
+
+              <h6
+                class="d-flex ms-2 text-wrap align-self-center justify-self-center darkText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+                est?
+              </h6>
+            </div>
+            <!-- item 2-->
+
+            <div class="d-flex justify-content-between">
+              <img class="d-flex mt-3"
+                src="{% static 'assets/img/bitcoin.jpg' %}" alt="avatar" style="
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                  " />
+
+              <h6
+                class="d-flex ms-2 text-wrap align-self-center justify-self-center darkText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+                est?
+              </h6>
+            </div>
+          </li>
+          <hr />
+
+          <!-- heading -->
+          <h6 class="text-muted fw-bold darkText">Birthdays</h6>
+
+          <div class="d-flex p-0 m-0">
+            <i class="fas fa-birthday-cake text-warning fa-2x"></i>
+
+            <!-- text -->
+            <p class=" darkText ms-2 ">
+              <b>Edith Bernard</b> and <b>2 others</b> have their birthdays
+              today.
+            </p>
+          </div>
+          <hr class="hr m-0 p-0" />
+
+          <!-- Contact text -->
+          <div class="d-flex align-items-center justify-content-between">
+            <!-- text -->
+            <h5  class="  text-muted darkText ">Contacts</h5>
+
+            <!-- icons -->
+            <ul class="list-unstyled d-flex">
+              <li><i class=" fas fa-video darkText  text-muted mx-2"></i></li>
+              <li><i class="fas fa-search darkText  text-muted mx-2"></i></li>
+              <li><i class="fas fa-ellipsis-h  darkText text-muted mx-2"></i></li>
+            </ul>
+          </div>
+
+          <!-- Active Contacts -->
+
+          <div class="d-flex flex-column darkText ">
+            <!-- contact 1 -->
+            <div
+              class="d-flex justify-content-start align-items-center position-relative">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/angry.png' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">Mary Jane</p>
+            </div>
+
+            <!-- contact 2 -->
+            <div class="d-flex justify-content-start align-items-center">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">Frank Edwin</p>
+            </div>
+
+            <!-- contact 3 -->
+            <div class="d-flex justify-content-start align-items-center">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pix1.jpg' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">Mike Jordan</p>
+            </div>
+
+            <!-- contact 4 -->
+            <div class="d-flex justify-content-start align-items-center">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic1.jpg' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">John Doe</p>
+            </div>
+
+            <!-- contact 5 -->
+            <div class="d-flex justify-content-start align-items-center">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic5.jpg' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">Matthew Saves</p>
+            </div>
+
+            <!-- contact 6 -->
+            <div class="d-flex justify-content-start align-items-center">
+              <!-- Contact img -->
+              <div class="position-relative">
+                <img src="{% static 'assets/img/pic3.jpg' %}" alt="avatar"
+                  width="40px" height="40px" class="rounded-circle" />
+                <span class="p-1 rounded position-absolute bottom-0" style="
+                      right: 2.8px;
+                      border: 1px solid #fff;
+                      background-color: rgb(94, 189, 94);
+                    "></span>
+              </div>
+
+              <!-- Contact name -->
+              <p class="fw-bold mt-3 ms-2">Ben Raul</p>
+            </div>
+          </div>
+
+
+
+
+          <i class="fas fa-edit p-3  rounded-circle  bg-white"
+            style="position: absolute; top: 650px; right: 30px; font-size: 20px"></i>
+
+        </ul>
+
+
+      </div>
+    </div>
+
+
+    <!-- ===================== Main ==================================== -->
+    <div
+      class="w-50 container mt-5 p-5 align-content-center justify-content-center">
+      <!-- Story -->
+      <div class="row ms-5">
+        <!-- item 1 -->
+        <div class="col-md position-relative shadow" style="
+            width: 100%;
+            max-width: 100px;
+            height: 170px;
+            border-radius: 1rem;
+            padding: 0%;
+          ">
+          <img  src="{% static 'assets/img/images.jpeg' %}"   height="75%"
+            width="100%" alt="avatar"  style="padding: 0; margin: 0" />
+          <div class="position-absolute" style="bottom: 23px; left: 30px">
+            <i
+              class="bg-white p-1 fas fa-plus-circle rounded-circle text-primary fa-2x"></i>
+          </div>
+          <p class="fs-7 text-black text-center mt-4">Create Story</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-md position-relative"
+          style="width: 100%; max-width: 130px; height: 170px">
+          <img src="{% static 'assets/img/pic3.jpg' %}"  height="100%"
+            width="100%" alt="avatar" class="shadow"
+            style="border-radius: 1rem; padding: 0; margin: 0" />
+          <p class="text-light fw-bold mb-1 text-center ms-2 position-absolute"
+            style="bottom: 1px; font-size: x-small">
+            Jaden Mark
+          </p>
+          <!-- badge img -->
+          <img class="position-absolute start-0 ms-3  m-2  rounded-circle"
+            src="{% static 'assets/img/Dvooskid.jpg' %}" width="35px"
+            height="35px" alt="avatar" style="border: 2px solid #047aed;">
+
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-md position-relative"
+          style="width: 100%; max-width: 130px; height: 170px">
+          <img src="{% static 'assets/img/pic2.jpg' %}" height="100%"
+            width="100%" alt="avatar" class="shadow"
+            style="border-radius: 1rem; margin: 0; padding: 0" />
+          <p class="text-light fw-bold mb-1 text-center ms-2 position-absolute"
+            style="bottom: 1px; font-size: x-small">
+            Roberts Clark
+          </p>
+          <!-- badge img -->
+          <img class="position-absolute start-0 ms-3  m-2  rounded-circle"
+            src="{% static 'assets/img/Frosh.jpg' %}" width="35px" height="35px"
+            alt="avatar" style="border: 2px solid #047aed;">
+        </div>
+
+        <!-- item 4 -->
+        <div class="col-md position-relative"
+          style="width: 100%; max-width: 130px; height: 170px">
+          <img src="{% static 'assets/img/pic1.jpg' %}" height="100%"
+            width="100%" alt="avatar" class="shadow"
+            style="border-radius: 1rem; margin: 0; padding: 0" />
+          <p class="text-light fw-bold mb-1 text-center ms-2 position-absolute"
+            style="bottom: 1px; font-size: x-small">
+            Cletus John
+          </p>
+          <!-- badge img -->
+          <img class="position-absolute start-0 ms-3  m-2  rounded-circle"
+            src="{% static 'assets/img/car_rear.jpeg' %}" width="35px"
+            height="35px" alt="avatar" style="border: 2px solid #047aed;">
+        </div>
+        <!-- item 5 -->
+        <div class="col-md position-relative"
+          style="width: 100%; max-width: 130px; height: 170px">
+          <img src="{% static 'assets/img/pix1.jpg' %}" height="100%"
+            width="100%" alt="avatar" class="shadow"
+            style="border-radius: 1rem; margin: 0; padding: 1px" />
+          <p class="text-light fw-bold mb-1 text-center ms-2 position-absolute"
+            style="bottom: 1px; font-size: x-small">
+            Bernard Sylvester
+          </p>
+          <!-- badge img -->
+          <img class="position-absolute start-0 ms-3  m-2  rounded-circle"
+            src="{% static 'assets/img/angry.png' %}" width="35px" height="35px"
+            alt="avatar" style="border: 2px solid #047aed;">
+        </div>
+      </div>
+
+      <!-- Write Post  -->
+      <section class="p-3 bg-white mt-5 mx-auto" style="border-radius: 1rem">
+        <div class="d-flex">
+          <img src="{% static 'assets/img/images.jpeg' %}" alt="avatar"
+            width="50" height="50" class="rounded-circle me-2" />
+          <input type="text" placeholder="What's on your mind, John?"
+            class="form-control rounded-pill bg-gray border-0" />
+        </div>
+        <hr />
+        <div
+          class="row align-items-center justify-content-center w-100 mx-auto">
+          <div class="col-md">
+            <div class="d-flex p-2" style="line-height: 1.1">
+              <i class="fas fa-video text-danger me-2"></i>
+              <p class="m-0">Live video</p>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="d-flex p-2" style="line-height: 1.1">
+              <i class="fas fa-image text-success me-2"></i>
+              <p class="m-0">Photo/Video</p>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="d-flex p-2" style="line-height: 1.1">
+              <i class="fas fa-smile text-warning me-2"></i>
+              <p class="m-0">Feeling/Activity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Post 1 -->
+      <section class="pt-2 pb-0  bg-white mt-3">
+
+        <div class="container-fluid  p-0">
+          <div class="d-flex align-items-center ms-3 justify-content-between ">
+
+            <div class="d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/Dvooskid.jpg' %}" width="40px"
+                height="40px" class="rounded-circle " alt="Dvooskid">
+              <div class="d-flex flex-column">
+                <!-- text -->
+                <p class="text-dark opacity-75 fw-bold mx-2 m-0 p-0">Jamie
+                  Benjamin</p>
+                <div
+                  class="d-flex align-items-center justify-content-start p-0 m-0 "
+                  style="line-height: 1.2;">
+                  <p class="text-muted fs-7 mx-1 p-0 mb-0"> 4 hrs <b> ∙</b> </p>
+                  <i class="fas fa-user-group fs-7 mt-0"></i>
+                </div>
+              </div>
+
+            </div>
+            <!-- icon -->
+            <i class="fa fa-ellipsis-h me-3" aria-hidden="true"></i>
+          </div>
+
+          <!-- heading -->
+          <p class="text-black p mt-1 ms-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing.</p>
+
+          <!-- img post -->
+          <img src="{% static 'assets/img/map.jpg' %}"
+            class=" w-100 h-100 m-0 p-0" alt="map">
+        </div>
+
+      </section>
+
+      <!-- Post 2 -->
+      <section class="pt-3 pb-0  bg-white mt-3">
+
+        <div class="container-fluid  p-0">
+          <div class="d-flex align-items-center ms-3 justify-content-between ">
+
+            <div class="d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/frosh.jpg' %}" width="40px"
+                height="40px" class="rounded-circle " alt="Frosh">
+              <div class="d-flex flex-column">
+                <!-- text -->
+                <p class="text-dark opacity-75 fw-bold mx-2 m-0 p-0">Mark
+                  Rashford </p>
+                <div
+                  class="d-flex align-items-center justify-content-start p-0 m-0 "
+                  style="line-height: 1.2;">
+                  <p class="text-muted fs-7 mx-1 p-0 mb-0"> 12 hrs <b> ∙</b>
+                  </p>
+                  <i class="fas fa-user-group fs-7 mt-0"></i>
+                </div>
+              </div>
+
+            </div>
+            <!-- icon -->
+            <i class="fa fa-ellipsis-h me-3" aria-hidden="true"></i>
+          </div>
+
+          <!-- heading -->
+          <p class="text-black p mt-1 ms-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing.</p>
+
+          <!-- img post -->
+          <img src="{% static 'assets/img/img_5terre.jpg' %}"
+            class=" w-100 h-100 m-0 p-0" alt="landscape">
+        </div>
+
+      </section>
+
+      <!-- Post 3 -->
+      <section class="pt-3 pb-0  bg-white mt-3">
+
+        <div class="container-fluid  p-0">
+          <div class="d-flex align-items-center ms-3 justify-content-between ">
+
+            <div class="d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/angry.png' %}" width="40px"
+                height="40px" class="rounded-circle " alt="Frosh">
+              <div class="d-flex flex-column">
+                <!-- text -->
+                <p class="text-dark opacity-75 fw-bold mx-2 m-0 p-0">Jane Hailey
+                </p>
+                <div
+                  class="d-flex align-items-center justify-content-start p-0 m-0 "
+                  style="line-height: 1.2;">
+                  <p class="text-muted fs-7 mx-1 p-0 mb-0"> 22 hrs <b> ∙</b>
+                  </p>
+                  <i class="fas fa-user-group fs-7 mt-0"></i>
+                </div>
+              </div>
+
+            </div>
+            <!-- icon -->
+            <i class="fa fa-ellipsis-h me-3" aria-hidden="true"></i>
+          </div>
+
+          <!-- heading -->
+          <p class="text-black p mt-1 ms-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing.</p>
+
+          <!-- img post -->
+          <img src="{% static 'assets/img/landscape4.jpeg' %}"
+            class=" w-100 h-100 m-0 p-0" alt="landscape">
+        </div>
+
+      </section>
+
+      <!-- Post 4 -->
+      <section class="pt-3 pb-0  bg-white mt-3">
+
+        <div class="container-fluid  p-0">
+          <div class="d-flex align-items-center ms-3 justify-content-between ">
+
+            <div class="d-flex">
+              <!-- avatar -->
+              <img src="{% static 'assets/img/pic2.jpg' %}" width="40px"
+                height="40px" class="rounded-circle " alt="Frosh">
+              <div class="d-flex flex-column">
+                <!-- text -->
+                <p class="text-dark opacity-75 fw-bold mx-2 m-0 p-0">Jeremiah
+                  Edet
+                </p>
+                <div
+                  class="d-flex align-items-center justify-content-start p-0 m-0 "
+                  style="line-height: 1.2;">
+                  <p class="text-muted fs-7 mx-1 p-0 mb-0"> 2 days ago <b> ∙</b>
+                  </p>
+                  <i class="fas fa-user-group fs-7 mt-0"></i>
+                </div>
+              </div>
+
+            </div>
+            <!-- icon -->
+            <i class="fa fa-ellipsis-h me-3" aria-hidden="true"></i>
+          </div>
+
+          <!-- heading -->
+          <p class="text-black p mt-1 ms-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing.</p>
+
+          <!-- img post -->
+          <img src="{% static 'assets/img/pic_trulli.jpg' %}"
+            class=" w-100 h-100 m-0 p-0" alt="landscape">
+        </div>
+
+      </section>
+
+
+
+    </div>
+
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- main.js -->
+    <script src="{% static 'assets/js/main.js'%}"></script>
+  </body>
+
+</html>
