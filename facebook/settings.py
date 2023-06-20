@@ -78,11 +78,9 @@ WSGI_APPLICATION = 'facebook.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'flexbook',
-        'USER': 'Dvooskid',
-        'HOST': 'flexbookdb.czxqbxbbue9x.us-east-1.rds.amazonaws.com',
-        'PASSWORD': 'Dvooskid001',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+        
        
     }
 }
